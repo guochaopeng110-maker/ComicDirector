@@ -1,0 +1,42 @@
+buildscript {
+    ext.kotlin_version = '2.1.0'
+    repositories {
+        // --- 修改点1：阿里云镜像放在 google() 前面 ---
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        // ----------------------------------------
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        // --- 修改点2：升级 Gradle 插件版本到 8.9.1 以支持 image_picker ---
+        classpath 'com.android.tools.build:gradle:8.9.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        // --- 修改点3：这里也要加阿里云镜像 ---
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        // ---------------------------------
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
