@@ -34,13 +34,13 @@
 
 ## 📋 各阶段需求
 
-| 阶段 | 文档 | 目标 |
+| 阶段 | 目录 | 目标 |
 |------|------|------|
-| Phase 1 | [基石阶段](./01_requirements/phases/phase1_foundation.md) | 技术债务清理、基础设施升级 |
-| Phase 2 | [感官阶段](./01_requirements/phases/phase2_senses.md) | 音频工程、字幕系统 |
-| Phase 3 | [智慧阶段](./01_requirements/phases/phase3_brain.md) | 角色一致性、导演模式 |
-| Phase 4 | [体验阶段](./01_requirements/phases/phase4_experience.md) | 用户体验、社交分享 |
-| Phase 5 | [商业阶段](./01_requirements/phases/phase5_business.md) | 商业模式、运营监控 |
+| Phase 1 | [基石阶段](./01_requirements/phases/phase1_foundation/) | 技术债务清理、基础设施升级 |
+| Phase 2 | [感官阶段](./01_requirements/phases/phase2_senses/) | 音频工程、字幕系统 |
+| Phase 3 | [智慧阶段](./01_requirements/phases/phase3_brain/) | 角色一致性、导演模式 |
+| Phase 4 | [体验阶段](./01_requirements/phases/phase4_experience/) | 用户体验、社交分享 |
+| Phase 5 | [商业阶段](./01_requirements/phases/phase5_business/) | 商业模式、运营监控 |
 
 ---
 
